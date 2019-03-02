@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load staticfiles %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <meta charset="UTF-8">
+    <title>Yardım</title>
+</head>
+<body>
+
+    {% include "navbartr.html" %}
+    <div class="container">
+        <br/>
+        <div class="alert alert-info">
+            <strong>***</strong>  Peptitleri aramak için tek veya çoklu peptit girebilirsiniz. Birden fazla peptit aramak için satırbaşı yapılması yeterlidir.
+        </div>
+        <div class="alert alert-info">
+            <strong>***</strong>  Peptitleri dosyadan aramak için fasta formatını kullanınız.
+        </div>
+        <div class="alert alert-info">
+            <strong>***</strong>
+            Kanser karşıtı peptitlerin tahmin edilmesi için; sResidue-Couple Model yöntemiyle peptitlere ait özellikler
+            çıkarılmış ve ardından çıkarılan özelliklerin puanlaması Blosum 90 matrisi ile yapılmıştır. Çalışma sonuçlarının
+            etkisini artırmak için  özellik seçimi yöntemlerinden Partition Membership yöntemini kullanılarak özelliklerin
+            boyutu azaltılıp sınıflandırıcı algoritmalar ile sınıflandırılmıştır. Gerçekleştirilen çalışma ile kanser karşıtı peptitler,
+            DPC Tree algoritması kullanarak %96.51 doğruluk, %96.38 duyarlılık, %96.60 özgüllük ve 0.928 mcc değerleri elde edilmiştir.
+        </div>
+    </div>
+    <br/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

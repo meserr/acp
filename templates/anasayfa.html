@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Kanser Karşıtı Peptitleri Sınıflandırma</title>
+</head>
+<body>
+
+    {% include "navbartr.html" %}
+    <div class="container">
+        <br/>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-lg-12">
+                <form class="card card-sm" action="cokluarama/" method="post" >
+                    {% csrf_token %}
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="input-group">
+                              <textarea name="peptides" rows="10" cols="160" placeholder="Peptit Giriniz"></textarea>
+
+                        </div>
+                        <span class="input-group-btn">
+                            <button class="btn btn-lg btn-success" type="submit">Ara</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="container">
+        <div class="col-12 col-md-12 col-lg-12">
+            {% if peptides %}
+            <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Peptit</th>
+                      <th scope="col">Sınıf</th>
+                      <th scope="col">Uzunluk</th>
+                    </tr>
+                  </thead>
+                {% for peptide in peptides %}
+                    <tbody>
+                        <tr>
+                          <td scope="row">{{ peptide.peptide }}</td>
+                          {% if peptide.label  %}
+                              <td>Kanser Karşıtı</td>
+                          {% else %}
+                              <td>Kanser Karşıtı Değil</td>
+                          {% endif %}
+
+                           <td>{{ peptide.length}}</td>
+
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+            {% else %}
+            {% endif %}
+
+        </div>
+    </div>
+</body>
+</html>

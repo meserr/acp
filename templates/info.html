@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load staticfiles %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <meta charset="UTF-8">
+    <title>Information</title>
+</head>
+<body>
+
+    {% include "navbar.html" %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <div class="container">
+        <br/>
+        <div class="alert alert-info">
+            <strong>***</strong>  You can enter single or multiple peptides to search for peptides. To search for more than one peptide is sufficient to make a carriage return.
+        </div>
+        <div class="alert alert-info">
+            <strong>***</strong>  Use the fasta format to search for peptides from the file.
+        </div>
+                <div class="alert alert-info">
+            <strong>***</strong>  To estimate anti-cancer peptides; Residue-Couple Model properties of the peptides were
+                    removed and then the characteristics of the extracted properties were done with the Blosum 90 matrix.
+                    In order to increase the effect of the study results, using the Partition Membership method of the
+                    feature selection methods, the size of the properties is reduced and classified by classifying algorithms.
+                    Anti-cancer peptides were obtained by using the DPC Tree algorithm, 96.51% accuracy, 96.38% sensitivity,
+                    96.60% specificity and 0.928 mcc values were obtained.
+        </div>
+    </div>
+    <br/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

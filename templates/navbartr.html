@@ -1,0 +1,31 @@
+<!-- Second navbar for profile settings -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+
+        <a class="navbar-brand" href="#">Kanser Karşıtı Peptitlerin Makine Öğrenmesi İle Sınıflandırılması</a>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'cokluarama' %}">Birden Fazla Dizilim Arama</a></li>
+            <li><a href="{% url 'dosyaarama' %}">Dosya Yükleme</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="true">Hakkında
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'yardim' %}">Yardım</a></li>
+                    <li><a class="dropdown-item" href="{% url 'iletisim' %}">İletişim</a></li>
+                </ul>
+            </li>
+            <a class="dropdown-item" href="{% url 'en' %}"><button class="btn btn-danger navbar-btn">EN</button></a>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->
